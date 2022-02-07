@@ -1,3 +1,7 @@
+import json
+import requests
+
+
 def obj_to_post(obj):
     # convert object to dict
 
@@ -66,3 +70,26 @@ def make_tag_cloud(qsTag):
         })
 
     return tagList
+
+
+# def post_to_slack(message):
+#     webhook_url = 'https://hooks.slack.com/services/T01J1JFGRF1/B031M5FH'
+#     message=[{
+#     		"type": "section",
+#     		"text": {
+#     			"type": "mrkdwn",
+#     			"text": "Danny Torrence left the following review for your property:"
+#     		}
+#     	}]
+#     slack_data = json.dumps({'blocks': message})
+#     response = requests.post(
+#         webhook_url, data=slack_data,
+#         headers={'Content-Type': 'application/json'}
+#     )
+#     # if response.status_code != 200:
+#     #     raise ValueError(
+#     #         'Request to slack returned an error %s, the response is:\n%s' % (response.status_code, response.text)
+#     #     )
+#     return response
+#
+

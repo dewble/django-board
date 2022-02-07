@@ -195,7 +195,7 @@ export default {
     },
 
     save() {
-      console.log("cancel()...");
+      console.log("save()...");
       if (this.actionKind === "create") this.createPost();
       else this.updatePost();
       this.dialog = false;

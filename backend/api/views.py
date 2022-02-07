@@ -186,3 +186,4 @@ class ApiPostDelV(OwnerOnlyMixin, BaseDetailView):
         self.object.delete()
         return JsonResponse(data={}, safe=True, status=204)
 
+

@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'taggit',
     'api.apps.ApiConfig',
     'accounts.apps.AccountsConfig',  # blog.apps.py 에서 정의
+    'gunicorn',
+
 ]
 
 MIDDLEWARE = [
@@ -147,4 +149,4 @@ TAGGIT_CASE_INSENSITIVE = True
 AUTH_USER_MODEL = 'accounts.User' ## 테이블 등록할 땐 app 이름과 모델이름을 같이 써주면 된다
 
 
-CSRF_TRUSTED_ORIGINS = ['http://localhost:8080','*']
+CSRF_TRUSTED_ORIGINS = ['http://localhost']

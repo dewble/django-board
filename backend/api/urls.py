@@ -1,6 +1,6 @@
 from django.urls import path
 
-from api import views
+from api import views, views_util
 
 app_name = 'api' # app namespace
 urlpatterns = [
@@ -21,4 +21,7 @@ urlpatterns = [
     path('post/create/', views.ApiPostCV.as_view(), name='post_create'),
     path('post/<int:pk>/update/', views.ApiPostUV.as_view(), name='post_update'),
     path('post/<int:pk>/delete/', views.ApiPostDelV.as_view(), name='post_delete'),
+
+    ## SLACK
+    # path('slack/post/create/', views_util.post_to_slack, name='slack_post_create'),
 ]
